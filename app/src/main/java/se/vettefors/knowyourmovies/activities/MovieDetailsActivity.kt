@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
+import android.widget.Toast
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_movie_details.*
 import se.vettefors.knowyourmovies.R
@@ -51,7 +53,14 @@ class MovieDetailsActivity : AppCompatActivity() {
                 })
 
         collapsingToolbarLayout_movie_details.title = movie.title
+    }
 
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
 
+        when(item?.itemId){
+            android.R.id.home -> onBackPressed()
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 }

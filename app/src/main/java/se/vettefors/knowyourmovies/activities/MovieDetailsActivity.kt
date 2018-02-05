@@ -34,6 +34,10 @@ class MovieDetailsActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayShowHomeEnabled(true)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        initDetails()
+    }
+
+    fun initDetails(){
         val extras = intent.extras
 
         val movie: Model.Movie = extras.getSerializable(EXTRA_MOVIE) as Model.Movie
@@ -53,6 +57,7 @@ class MovieDetailsActivity : AppCompatActivity() {
                 })
 
         collapsingToolbarLayout_movie_details.title = movie.title
+        textView_movie_overview.text = movie.overview
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {

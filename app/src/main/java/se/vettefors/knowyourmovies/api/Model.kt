@@ -14,5 +14,6 @@ class Model {
                      @SerializedName("vote_average") val voteAverage: Double,
                      @SerializedName("release_date") val releaseDate: String,
                      @SerializedName("poster_path") val poster: String,
-                     @SerializedName("backdrop_path") val backdrop: String): Serializable
+                     @SerializedName("backdrop_path") val backdrop: String,
+                     @SerializedName("overview") val overview: String) : Serializable
 }

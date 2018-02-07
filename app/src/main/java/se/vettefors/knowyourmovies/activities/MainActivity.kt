@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity(), TopRatedMoviesFragment.OnTopRatedMovie
                         sharedImageView!!,
                         transitionName)
 
-        startActivity(MovieDetailsActivity.newIntent(this, transitionName, movie),
+        startActivity(MovieDetailsActivity.newIntent(this, transitionName, movie.id),
                 options.toBundle())
 
     }
